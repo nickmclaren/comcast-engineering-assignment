@@ -95,7 +95,7 @@ jobs:
 
       - name: Delete S3 Bucket
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.destroy == 'true'
-        run: aws s3 rb s3://terraform-state-file-bucket-nmusw2 --force
+        run: aws s3 rb s3://terraform-state-file-bucket-nm --force
 
       - name: Delete DynamoDB Table
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.destroy == 'true'
