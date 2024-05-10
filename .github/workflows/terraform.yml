@@ -91,7 +91,7 @@ jobs:
 
       - name: Remove Terraform State File from S3
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.destroy == 'true'
-        run: aws s3 rm s3://terraform-state-file-bucket-nmusw2/databee-terraform-project-/terraform.tfstate
+        run: aws s3 rm s3://terraform-state-file-bucket-nm/comcast-engineering-project-/terraform.tfstate
 
       - name: Delete S3 Bucket
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.destroy == 'true'
